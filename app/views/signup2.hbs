@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 lt8"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7 lt8"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8 lt8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="UTF-8" />
+        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
+        <title>Sign Up | Sign In</title>
+        <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/animate-custom.css" />
+        <style>
+
+.container > header h1 {
+    font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+    font-size: 35px;
+    line-height: 35px;
+    position: relative;
+    font-weight: 400;
+    color: rgba(26,89,120,0.9);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+    padding: 0px 0px 5px 0px;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+user agent stylesheet
+h1 {
+    display: block;
+    font-size: 2em;
+    -webkit-margin-before: 0.67em;
+    -webkit-margin-after: 0.67em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+.container > header {
+    padding: 20px 30px 10px 30px;
+    margin: 0px 20px 10px 20px;
+    position: relative;
+    display: block;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    text-align: center;
+}
+.container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+}
+body {
+    font-family: Cambria, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #1d3c41;
+    overflow-y: scroll;
+}
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Registration with <span>Clinic Plus</span></h1>
+            </header>
+            <section>				
+                <div id="container_demo" >
+                    <div id="wrapper">
+
+                        <div id="register" class="animate form">
+                            <form  action="/signup" autocomplete="on"> 
+                                <h1> Sign up </h1>
+                                <br> 
+                                <p> 
+                                    <label for="email" class="youmail" data-icon="e" > Your Email</label>
+                                    <input class="text" id="emailsignup" name="email" required="required" type="email" placeholder="myemail@domain.com"/> 
+                                </p>
+                                <br> 
+                                <p> 
+                                    <label for="firstname" class="uname" data-icon="u">Your First Name</label>
+                                    <input id="usernamesignup" name="firstname" required="required" type="text" placeholder="Stan" />
+                                </p>
+                                <br> 
+                                <p> 
+                                    <label for="lastname" class="uname" data-icon="u">Your Last Name</label>
+                                    <input id="usernamesignup" name="lastname" required="required" type="text" placeholder="Lee" />
+                                </p>
+                                <br> 
+                                <p> 
+                                    <label for="password" class="youpasswd" data-icon="p">Your password </label>
+                                    <input id="passwordsignup" name="password" required="required" type="password" placeholder="eg. X8df!90EO"/>
+                                </p>
+                                <br> 
+                                <p class="signin button"> 
+									<input type="submit" value="Sign Up"/> 
+								</p>
+                                <br> 
+                                <p class="change_link">  
+									Already a member ?
+									<a href="/signin" class="to_register"> Go and log in </a>
+								</p>
+                            </form>
+                        </div>
+						
+                    </div>
+                </div>  
+            </section>
+        </div>
+    </body>
+</html>
