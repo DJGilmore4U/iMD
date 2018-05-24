@@ -2,43 +2,49 @@
  
  "development": {
 
-     "username": "root",
+     "username": "ff2gsiuqt3egdh9h",
 
-     "password": "root",
+     "password": "g2y70uasgeafj5ak",
 
-     "database": "sequelize_passport",
+     "database": "qi5itjhjjgi7m6fg",
 
-     "host": "127.0.0.1",
+     "host": "s3lkt7lynu0uthj8.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
 
-     "dialect": "mysql"
+     "dialect": "mysql",
+
+     "port": "3306"
 
  },
 
  "test": {
 
-     "username": "root",
+     "username": "ff2gsiuqt3egdh9h",
 
-     "password": "root",
+     "password": "g2y70uasgeafj5ak",
 
-     "database": "sequelize-passport",
+     "database": "qi5itjhjjgi7m6fg",
 
-     "host": "127.0.0.1",
+     "host": "s3lkt7lynu0uthj8.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
 
-     "dialect": "mysql"
+     "dialect": "mysql",
+
+     "port": "3306"
 
  },
 
  "production": {
 
-     "username": "root",
+     "username": "ff2gsiuqt3egdh9h",
 
-    "password": "root",
+    "password": "g2y70uasgeafj5ak",
 
-    "database": "sequelize-passport",
+    "database": "qi5itjhjjgi7m6fg",
 
-    "host": "127.0.0.1",
+    "host": "s3lkt7lynu0uthj8.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
 
-    "dialect": "mysql"
+    "dialect": "mysql",
+
+    "port": "3306"
 
  }
 

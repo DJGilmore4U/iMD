@@ -85,7 +85,7 @@ div {
   </style>
   <container>
   <div>
-    <h1>ClinicPLUS Registration Form</h1>
+    <h1>Clinic<span>&#10010;</span><br>Registration Form</h1>
   <form id="signup" name="signup" method="post" action="/signup">
   <p>
   <label for="email">Email</label>
@@ -103,10 +103,9 @@ div {
   <label for="password">Password</label>
   <input name="password" class="text" type="password" />
   </p>
-  <p>
-  <input type="checkbox" name="med" value="Doctor"> I am a Doctor<br>
-  <input type="checkbox" name="med" value="Nurse" checked="checked"> I am a Nurse<br>
-  </p>
+  <h4>Specify your Permissions:</h4>
+  <input type="checkbox" name="med" value="Doctor"> I'm a Doctor<br>
+  <input type="checkbox" name="med" value="Nurse" checked="checked"> I'm a Nurse<br>
   <input class="btn" type="submit" value="Sign Up" />
 </form>
 <p class="change_link">Already a Member?<a href="/signin" class="to_register"> Sign-In</a>
