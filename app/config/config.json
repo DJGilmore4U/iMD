@@ -10,7 +10,9 @@
 
      "host": "s3lkt7lynu0uthj8.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
 
-     "dialect": "mysql"
+     "dialect": "mysql",
+
+     "port": "5000"
 
  },
 
@@ -24,7 +26,9 @@
 
      "host": "s3lkt7lynu0uthj8.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
 
-     "dialect": "mysql"
+     "dialect": "mysql",
+
+     "port": "5000"
 
  },
 
@@ -38,7 +42,9 @@
 
     "host": "s3lkt7lynu0uthj8.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
 
-    "dialect": "mysql"
+    "dialect": "mysql",
+
+    "port": "5000"
 
  }
 
