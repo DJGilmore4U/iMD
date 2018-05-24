@@ -2,7 +2,7 @@
   "name": "imd",
   "version": "1.0.0",
   "description": "Using Passport with Sequelize and MySQL",
-  "main": "index.js",
+  "main": "/app/models/index.js",
   "scripts": {
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/DJGilmore4U/iMD.git"
   },
-  "author": "DJTurner and Team",
+  "author": "DJTurner4U and Team",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/DJGilmore4U/iMD/issues"
