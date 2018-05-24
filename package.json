@@ -4,8 +4,8 @@
   "description": "Using Passport with Sequelize and MySQL",
   "main": "login.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node login.js"
+    "start": "node login.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -26,9 +26,9 @@
     "express-session": "^1.15.6",
     "mysql": "^2.15.0",
     "mysql2": "^1.5.3",
-    "npm": "^6.0.1",
+    "npm": "^6.1.0",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
-    "sequelize": "^4.37.8"
+    "sequelize": "^4.37.9"
   }
 }
