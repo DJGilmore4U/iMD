@@ -2,9 +2,9 @@
   "name": "imd",
   "version": "1.0.0",
   "description": "Using Passport with Sequelize and MySQL",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node login.js",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
