@@ -16,6 +16,12 @@ app.use(bodyParser.json());
 
  // For Passport
 app.use(session({ store: new'RedisStore(options)',secret: 'keyboard cat',resave: false, saveUninitialized:true})); // session secret
+app.use(function (req, res, next) {
+  if (!req.session) {
+    return next(new Error('oh no')) // handle error
+  }
+  next() // otherwise continue
+});
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 app.use(require('stylus').middleware(path.join(__dirname, 'public')));
