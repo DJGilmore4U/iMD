@@ -1,12 +1,12 @@
 var express    = require('express')
 var app        = express()
 var passport   = require('passport')
-var session    = require('express-session')
-var RedisStore = require('connect-redis')(session);
+var session    = require('express-session')(RedisStore)
+var RedisStore = require('connect-redis')(session)
 var bodyParser = require('body-parser')
 var env        = require('dotenv').load()
 var exphbs     = require('express-handlebars')
-var mysql      = require('mysql');
+var mysql      = require('mysql')
 
 
 //For BodyParser
@@ -24,7 +24,7 @@ app.use(function (req, res, next) {
 });
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
-app.use(require('stylus').middleware(path.join(__dirname, 'public')));
+
 
 
  //For Handlebars
