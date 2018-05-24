@@ -17,6 +17,7 @@ app.use(bodyParser.json());
 app.use(session({ secret: 'keyboard cat',resave: true, saveUninitialized:true})); // session secret
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
+app.use(require('stylus').middleware(path.join(__dirname, 'public')));
 
 
  //For Handlebars
