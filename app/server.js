@@ -7,7 +7,6 @@ var bodyParser = require('body-parser')
 var env        = require('dotenv').load()
 var exphbs     = require('express-handlebars')
 var mysql      = require('mysql')
-var logger     = require('morgan')
 var path       = require('path')
 
 
