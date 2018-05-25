@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 
 
  // For Passport
-app.use(session({secret: 'keyboard cat',resave: false, saveUninitialized:true})); // session secret
+app.use(session({secret: 'keyboard cat', resave:true, saveUninitialized:true})); // session secret
 
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
@@ -23,7 +23,7 @@ app.use(passport.session()); // persistent login sessions
 
 
  //For Handlebars
-app.set('views', path.join(__dirname, 'app/views'));
+app.set('views', './app/views');
 app.engine('hbs', exphbs({extname: '.hbs'}));
 app.set('view engine', '.hbs');
 
