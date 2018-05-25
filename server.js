@@ -2,10 +2,12 @@ var express    = require('express')
 var app        = express()
 var passport   = require('passport')
 var session    = require('express-session')
+var RedisStore = require('connect-redis')(session)
 var bodyParser = require('body-parser')
 var env        = require('dotenv').load()
 var exphbs     = require('express-handlebars')
-
+var mysql      = require('mysql')
+var path       = require('path')
 
 
 //For BodyParser
@@ -14,20 +16,23 @@ app.use(bodyParser.json());
 
 
  // For Passport
-app.use(session({ secret: 'keyboard cat',resave: true, saveUninitialized:true})); // session secret
+app.use(session({ store: new'RedisStore(options)',secret: 'keyboard cat',resave: false, saveUninitialized:true})); // session secret
+app.use(function (req, res, next) {
+  if (!req.session) {
+    return next(new Error('oh no')) // handle error
+  }
+  next() // otherwise continue
+});
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 
 
+
  //For Handlebars
-app.set('views', './app/views')
+app.set('views', path.join(__dirname, 'app/views'));
 app.engine('hbs', exphbs({extname: '.hbs'}));
 app.set('view engine', '.hbs');
 
-
-app.get('/', function(req, res){
-  res.send('Welcome to Passport with Sequelize');
-});
 
 
 //Models
@@ -52,7 +57,7 @@ console.log(err,"Something went wrong with the Database Update!")
 
 
 
-app.listen(5000, function(err){
+app.listen(process.env.PORT || 5000, function(err){
     if(!err)
     console.log("Site is live"); else console.log(err)
 
