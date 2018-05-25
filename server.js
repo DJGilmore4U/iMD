@@ -2,7 +2,6 @@ var express    = require('express')
 var app        = express()
 var passport   = require('passport')
 var session    = require('express-session')
-var RedisStore = require('connect-redis')(session)
 var bodyParser = require('body-parser')
 var env        = require('dotenv').load()
 var exphbs     = require('express-handlebars')
@@ -16,13 +15,8 @@ app.use(bodyParser.json());
 
 
  // For Passport
-app.use(session({ store: new'RedisStore(options)',secret: 'keyboard cat',resave: false, saveUninitialized:true})); // session secret
-app.use(function (req, res, next) {
-  if (!req.session) {
-    return next(new Error('oh no')) // handle error
-  }
-  next() // otherwise continue
-});
+app.use(session({secret: 'keyboard cat',resave: false, saveUninitialized:true})); // session secret
+
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 
