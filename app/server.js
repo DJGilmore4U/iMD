@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 
 
  // For Passport
-//app.use(session({ store: new'RedisStore(options)',secret: 'keyboard cat'/*,resave: false, saveUninitialized:true*/})); // session secret
+app.use(session({ store: new'RedisStore(options)',secret: 'keyboard cat',resave: false, saveUninitialized:true})); // session secret
 app.use(function (req, res, next) {
   if (!req.session) {
     return next(new Error('oh no')) // handle error
@@ -60,7 +60,7 @@ console.log(err,"Something went wrong with the Database Update!")
 
 
 
-app.listen(5000, function(err){
+app.listen(process.env.PORT || 5000, function(err){
     if(!err)
     console.log("Site is live"); else console.log(err)
 
