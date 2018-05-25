@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 
 
  // For Passport
-app.use(session({ store: new'RedisStore(options)',secret: 'keyboard cat'/*,resave: false, saveUninitialized:true*/})); // session secret
+//app.use(session({ store: new'RedisStore(options)',secret: 'keyboard cat'/*,resave: false, saveUninitialized:true*/})); // session secret
 app.use(function (req, res, next) {
   if (!req.session) {
     return next(new Error('oh no')) // handle error
