@@ -7,6 +7,8 @@ var bodyParser = require('body-parser')
 var env        = require('dotenv').load()
 var exphbs     = require('express-handlebars')
 var mysql      = require('mysql')
+var logger     = require('morgan')
+var path       = require('path')
 
 
 //For BodyParser
@@ -15,7 +17,7 @@ app.use(bodyParser.json());
 
 
  // For Passport
-//app.use(session({ store: new'RedisStore(options)',secret: 'keyboard cat',resave: false, saveUninitialized:true})); // session secret
+app.use(session({ store: new'RedisStore(options)',secret: 'keyboard cat',resave: false, saveUninitialized:true})); // session secret
 app.use(function (req, res, next) {
   if (!req.session) {
     return next(new Error('oh no')) // handle error
@@ -28,14 +30,10 @@ app.use(passport.session()); // persistent login sessions
 
 
  //For Handlebars
-app.set('views', './app/views')
+app.set('views', path.join(__dirname, 'app/views'));
 app.engine('hbs', exphbs({extname: '.hbs'}));
 app.set('view engine', '.hbs');
 
-
-app.get('/', function(req, res){
-  res.send('Welcome to Passport with Sequelize');
-});
 
 
 //Models
