@@ -87,7 +87,7 @@
     
   //LOCAL SIGNIN
   passport.use('local-signin', new LocalStrategy(
-    console.log('Got into local strategy')
+    
   {
 
   // by default, local strategy uses username and password, we will override with email
@@ -97,7 +97,7 @@
   },
 
   function(req, email, password, done) {
-
+    console.log('Got into local strategy');
     var User = user;
 
     var isValidPassword = function(userpass,password){
