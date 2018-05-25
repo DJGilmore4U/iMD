@@ -87,7 +87,7 @@
     
   //LOCAL SIGNIN
   passport.use('local-signin', new LocalStrategy(
-    
+    console.log('Got into local strategy')
   {
 
   // by default, local strategy uses username and password, we will override with email
@@ -107,11 +107,12 @@
     User.findOne({ where : { email: email}}).then(function (user) {
 
       if (!user) {
+        console.log('EMAIL DOESNT EXIST');
         return done(null, false, { message: 'Email does not exist' });
       }
 
       if (!isValidPassword(user.password,password)) {
-
+        console.log('INCORRECT PASSWORD');
         return done(null, false, { message: 'Incorrect password.' });
 
       }
