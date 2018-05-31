@@ -1,6 +1,7 @@
 # ClinicPLUS Group Collaboration Project# 2 for UCSD Coding Bootcamp
-# Team Members: DJ Turner, Fernando Cely, Creative-Diego, and Andrew Edelstein
-
+```
+Team Members: DJ Turner, Fernando Cely, Creative-Diego, and Andrew Edelstein
+```
 My Portion of the project goes as follows:
 
 Sign Up | Sign In | Log Out
