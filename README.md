@@ -54,7 +54,9 @@ Root Directory Map
 To demo the login functionality please visit https://clinicplus.herokuapp.com
 
 Team Member independent repos used to develop collab: 
+```
 https://github.com/fcely/EMR
 https://github.com/creativediego/cloudemr
 https://github.com/ASEdelstein/myIMD
 https://github.com/DJGilmore4U/iMD
+```
