@@ -15,8 +15,8 @@ exports.signin = function(req,res){
 
 exports.dashboard = function(req,res){
 
-	res.render('dashboard'); 
-
+	//res.render('dashboard'); 
+  window.location.replace("https://desolate-springs-87096.herokuapp.com/");
 }
 
 exports.logout = function(req,res){
