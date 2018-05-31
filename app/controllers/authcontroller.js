@@ -14,9 +14,9 @@ exports.signin = function(req,res){
 }
 
 exports.dashboard = function(req,res){
-
+  res.send('<script>window.location.href="https://desolate-springs-87096.herokuapp.com/";</script>');
 	//res.render('dashboard'); 
-  window.location.replace("https://desolate-springs-87096.herokuapp.com/");
+  //window.location.replace("https://desolate-springs-87096.herokuapp.com/");
 }
 
 exports.logout = function(req,res){
